@@ -1,0 +1,1176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns="http://data.europa.eu/m8g/"
+            xmlns:dct="http://purl.org/dc/terms/"
+            xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+            targetNamespace="http://data.europa.eu/m8g/"
+            elementFormDefault="qualified"
+            attributeFormDefault="unqualified"
+            xml:lang="en"
+            version="2.0">
+
+    <xsd:annotation>
+        <xsd:documentation xml:lang="en">Core Vocabularies</xsd:documentation>
+        <xsd:appinfo>
+            <dct:abstract>Core Vocabularies are simplified, reusable, and extensible data models that capture the fundamental characteristics of an entity, such as a person or a public organisation, in a context-neutral manner.</dct:abstract>
+            <dct:issued>2021-06-30</dct:issued>
+            <dct:publisher>http://publications.europa.eu/resource/authority/corporate-body/DIGIT</dct:publisher>
+            <dct:license>https://creativecommons.org/licenses/by/4.0/</dct:license>
+        </xsd:appinfo>
+    </xsd:annotation>
+
+    <xsd:element name="Agent" type="AgentType">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">Global Agent element.</xsd:documentation>
+        </xsd:annotation>
+    </xsd:element>
+    <xsd:element name="Constraint" type="ConstraintType">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">Global Constraint element.</xsd:documentation>
+        </xsd:annotation>
+    </xsd:element>
+    <xsd:element name="Criterion" type="CriterionType">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">Global Criterion element.</xsd:documentation>
+        </xsd:annotation>
+    </xsd:element>
+    <xsd:element name="Dataset" type="DatasetType" >
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">Global Dataset element.</xsd:documentation>
+        </xsd:annotation>
+    </xsd:element>
+    <xsd:element name="Evidence" type="EvidenceType">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">Global Evidence element.</xsd:documentation>
+        </xsd:annotation>
+    </xsd:element>
+    <xsd:element name="EvidenceTypeClass" type="EvidenceTypeType">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">Global EvidenceType element.</xsd:documentation>
+        </xsd:annotation>
+    </xsd:element>
+    <xsd:element name="EvidenceTypeList" type="EvidenceTypeListType" >
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">Global EvidenceTypeList element.</xsd:documentation>
+        </xsd:annotation>
+    </xsd:element>
+    <xsd:element name="InformationConcept" type="InformationConceptType">
+          <xsd:annotation>
+            <xsd:documentation xml:lang="en">Global InformationConcept element.</xsd:documentation>
+        </xsd:annotation>
+    </xsd:element>
+    <xsd:element name="InformationRequirement" type="InformationRequirementType">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">Global InformationRequirement element.</xsd:documentation>
+        </xsd:annotation>
+    </xsd:element>
+    <xsd:element name="Location" type="LocationType">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">Global Location element.</xsd:documentation>
+        </xsd:annotation>
+    </xsd:element>
+    <xsd:element name="PeriodOfTime" type="PeriodOfTimeType">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">Global PeriodOfTime element.</xsd:documentation>
+        </xsd:annotation>
+    </xsd:element>
+    <xsd:element name="ReferenceFramework" type="ReferenceFrameworkType">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">Global ReferenceFramework element.</xsd:documentation>
+        </xsd:annotation>
+    </xsd:element>
+    <xsd:element name="Requirement" type="RequirementType">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">Global Requirement element.</xsd:documentation>
+        </xsd:annotation>
+    </xsd:element>
+    <xsd:element name="SupportedValue" type="SupportedValueType" >
+         <xsd:annotation>
+            <xsd:documentation xml:lang="en">Global SupportedValue element.</xsd:documentation>
+        </xsd:annotation>
+    </xsd:element>
+
+	<xsd:element name="AgentAugmentationPoint" abstract="true">
+	    <xsd:annotation>
+            <xsd:documentation xml:lang="en">Global Agent AugmentationPoint element.</xsd:documentation>
+        </xsd:annotation>
+    </xsd:element>
+	<xsd:element name="ConstraintAugmentationPoint" abstract="true">
+	    <xsd:annotation>
+            <xsd:documentation xml:lang="en">Global Constraint AugmentationPoint element.</xsd:documentation>
+        </xsd:annotation>
+    </xsd:element>
+	<xsd:element name="CriterionAugmentationPoint" abstract="true">
+	    <xsd:annotation>
+            <xsd:documentation xml:lang="en">Global Criterion AugmentationPoint element.</xsd:documentation>
+        </xsd:annotation>
+    </xsd:element>
+	<xsd:element name="DatasetAugmentationPoint" abstract="true">
+		<xsd:annotation>
+            <xsd:documentation xml:lang="en">Global Dataset AugmentationPoint element.</xsd:documentation>
+        </xsd:annotation>
+    </xsd:element>
+	<xsd:element name="EvidenceAugmentationPoint" abstract="true">
+		<xsd:annotation>
+            <xsd:documentation xml:lang="en">Global Evidence AugmentationPoint element.</xsd:documentation>
+        </xsd:annotation>
+    </xsd:element>
+	<xsd:element name="EvidenceTypeAugmentationPoint" abstract="true">
+		<xsd:annotation>
+            <xsd:documentation xml:lang="en">Global EvidenceType AugmentationPoint element.</xsd:documentation>
+        </xsd:annotation>
+    </xsd:element>
+	<xsd:element name="EvidenceTypeListAugmentationPoint" abstract="true">
+		<xsd:annotation>
+            <xsd:documentation xml:lang="en">Global EvidenceTypeList AugmentationPoint element.</xsd:documentation>
+        </xsd:annotation>
+    </xsd:element>
+	<xsd:element name="InformationConceptAugmentationPoint" abstract="true">
+		<xsd:annotation>
+            <xsd:documentation xml:lang="en">Global Information ConceptAugmentationPoint element.</xsd:documentation>
+        </xsd:annotation>
+    </xsd:element>
+	<xsd:element name="InformationRequirementAugmentationPoint" abstract="true">
+		<xsd:annotation>
+            <xsd:documentation xml:lang="en">Global SupportedValue AugmentationPoin element.</xsd:documentation>
+        </xsd:annotation>
+    </xsd:element>
+	<xsd:element name="LocationAugmentationPoint" abstract="true">
+		<xsd:annotation>
+            <xsd:documentation xml:lang="en">Global Location AugmentationPoint element.</xsd:documentation>
+        </xsd:annotation>
+    </xsd:element>
+	<xsd:element name="PeriodOfTimeAugmentationPoint" abstract="true">
+		<xsd:annotation>
+            <xsd:documentation xml:lang="en">Global PeriodOfTime AugmentationPoint element.</xsd:documentation>
+        </xsd:annotation>
+    </xsd:element>
+	<xsd:element name="ReferenceFrameworkAugmentationPoint" abstract="true">
+		<xsd:annotation>
+            <xsd:documentation xml:lang="en">Global ReferenceFramework AugmentationPoint element.</xsd:documentation>
+        </xsd:annotation>
+    </xsd:element>
+	<xsd:element name="RequirementAugmentationPoint" abstract="true">
+		<xsd:annotation>
+            <xsd:documentation xml:lang="en">Global Requirement AugmentationPoint element.</xsd:documentation>
+        </xsd:annotation>
+    </xsd:element>
+	<xsd:element name="SupportedValueAugmentationPoint" abstract="true">
+		<xsd:annotation>
+            <xsd:documentation xml:lang="en">Global SupportedValue AugmentationPoint element.</xsd:documentation>
+        </xsd:annotation>
+    </xsd:element>
+	
+    <xsd:element name="Bias" type="xsd:decimal">
+    	<xsd:annotation>
+            <xsd:documentation xml:lang="en">Global Bias property.</xsd:documentation>
+        </xsd:annotation>
+    </xsd:element>
+    <xsd:element name="ConfidentialityLevelTypeProperty" type="CodeType">
+    	<xsd:annotation>
+            <xsd:documentation xml:lang="en">Global ConfidentialityLevelType property.</xsd:documentation>
+        </xsd:annotation>
+    </xsd:element>
+    <xsd:element name="Description" type="xsd:string">
+       	<xsd:annotation>
+            <xsd:documentation xml:lang="en">Global Description property.</xsd:documentation>
+        </xsd:annotation>
+    </xsd:element>
+    <xsd:element name="Duration" type="xsd:duration">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">Global Duration property.</xsd:documentation>
+        </xsd:annotation>
+    </xsd:element>
+    <xsd:element name="EndTime" type="xsd:dateTime">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">Global EndTime property.</xsd:documentation>
+        </xsd:annotation>
+    </xsd:element>
+    <xsd:element name="EvidenceTypeClassification" type="CodeType">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">Global EvidenceTypeClassification property.</xsd:documentation>
+        </xsd:annotation>
+    </xsd:element>
+    <xsd:element name="ExpressionOfExpectedValue" type="LiteralSimpleType">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">Global ExpressionOfExpectedValue property.</xsd:documentation>
+        </xsd:annotation>
+    </xsd:element>
+    <xsd:element name="Identifier" type="LiteralSimpleType">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">Global Identifier property.</xsd:documentation>
+        </xsd:annotation>
+    </xsd:element>
+    <xsd:element name="Name" type="xsd:string">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">Global Name property.</xsd:documentation>
+        </xsd:annotation>
+    </xsd:element>
+    <xsd:element name="Query" type="LiteralSimpleType" >
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">Global Query property.</xsd:documentation>
+        </xsd:annotation>
+    </xsd:element>
+    <xsd:element name="StartTime" type="xsd:dateTime">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">Global StartTime property.</xsd:documentation>
+        </xsd:annotation>
+    </xsd:element>
+    <xsd:element name="TypeProperty" type="CodeType">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">Global Type property.</xsd:documentation>
+        </xsd:annotation>
+    </xsd:element>
+    <xsd:element name="Value" type="LiteralSimpleType">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">Global Value property.</xsd:documentation>
+        </xsd:annotation>
+    </xsd:element>
+    <xsd:element name="Weight" type="xsd:decimal">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">Global Weight property.</xsd:documentation>
+        </xsd:annotation>
+    </xsd:element>
+    <xsd:element name="WeightingConsiderationDescription" type="xsd:string">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">Global WeightingConsiderationDescription property.</xsd:documentation>
+        </xsd:annotation>
+    </xsd:element>
+    <xsd:element name="WeightingTypeProperty" type="CodeType">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">Global WeightingType property.</xsd:documentation>
+        </xsd:annotation>
+    </xsd:element>
+
+    <xsd:element name="Constrains" type="ConstrainsAssociationType">
+         <xsd:annotation>
+            <xsd:documentation xml:lang="en">Global Constrains association.</xsd:documentation>
+        </xsd:annotation>
+    </xsd:element> 
+    <xsd:element name="HasConcept" type="HasConceptAssociationType">
+         <xsd:annotation>
+            <xsd:documentation xml:lang="en">Global HasConcept association.</xsd:documentation>
+        </xsd:annotation>
+    </xsd:element>
+    <xsd:element name="HasEvidenceTypeList" type="HasEvidenceTypeListAssociationType">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">Global HasEvidenceTypeList association.</xsd:documentation>
+        </xsd:annotation>
+    </xsd:element>
+    <xsd:element name="HasQualifiedRelation" type="HasQualifiedRelationAssociationType">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">Global HasQualifiedRelation association.</xsd:documentation>
+        </xsd:annotation>
+    </xsd:element>    
+    <xsd:element name="HasRequirement" type="HasRequirementAssociationType">
+         <xsd:annotation>
+            <xsd:documentation xml:lang="en">Global HasRequirement association.</xsd:documentation>
+        </xsd:annotation>
+    </xsd:element>
+        <xsd:element name="HasSupportingEvidence" type="HasSupportingEvidenceAssociationType">
+         <xsd:annotation>
+            <xsd:documentation xml:lang="en">Global HasSupportingEvidence association.</xsd:documentation>
+        </xsd:annotation>
+    </xsd:element>
+    <xsd:element name="IsAbout" type="IsAboutAssociationType">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">Global IsAbout association.</xsd:documentation>
+        </xsd:annotation>
+    </xsd:element>
+    <xsd:element name="IsConformantTo" type="IsConformantToAssociationType">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">Global IsConformantTo association.</xsd:documentation>
+        </xsd:annotation>
+    </xsd:element>
+    <xsd:element name="IsCreatedBy" type="IsCreatedByAssociationType">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">Global IsCreatedBy association.</xsd:documentation>
+        </xsd:annotation>
+    </xsd:element>
+    <xsd:element name="IsDerivedFrom" type="IsDerivedFromAssociationType">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">Global IsDerivedFrom association.</xsd:documentation>
+        </xsd:annotation>
+    </xsd:element>
+    <xsd:element name="EvidenceIsIssuedBy" type="EvidenceIsIssuedByAssociationType">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">Global EvidenceIsIssuedBy association.</xsd:documentation>
+        </xsd:annotation>
+    </xsd:element>
+    <xsd:element name="RequirementIsIssuedBy" type="RequirementIsIssuedByAssociationType">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">Global RequirementIsIssuedBy association.</xsd:documentation>
+        </xsd:annotation>
+    </xsd:element>
+    <xsd:element name="IsRequirementOf" type="IsRequirementOfAssociationType">
+         <xsd:annotation>
+            <xsd:documentation xml:lang="en">Global IsRequirementOf association.</xsd:documentation>
+        </xsd:annotation>
+    </xsd:element>
+    <xsd:element name="IsSpecifiedIn" type="IsSpecifiedInAssociationType">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">Global IsSpecifiedIn association.</xsd:documentation>
+        </xsd:annotation>
+    </xsd:element>
+    <xsd:element name="ProvidesValueFor" type="ProvidesValueForAssociationType">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">Global ProvidesValueFor association.</xsd:documentation>
+        </xsd:annotation>
+    </xsd:element>
+    <xsd:element name="SpecifiesEvidenceTypeAssociation" type="SpecifiesEvidenceTypeAssociationType">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">Global SpecifiesEvidenceType association.</xsd:documentation>
+        </xsd:annotation>
+    </xsd:element>
+    <xsd:element name="SupportsConcept" type="SupportsConceptAssociationType">
+         <xsd:annotation>
+            <xsd:documentation xml:lang="en">Global SupportsConcept association.</xsd:documentation>
+        </xsd:annotation>
+    </xsd:element>
+    <xsd:element name="SupportsRequirement" type="SupportsRequirementAssociationType">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">Global WeightingType association.</xsd:documentation>
+        </xsd:annotation>
+    </xsd:element>
+    <xsd:element name="SupportsValue" type="SupportsValueAssociationType">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">Global SupportsValue association.</xsd:documentation>
+        </xsd:annotation>
+    </xsd:element>
+    <xsd:element name="ValidityPeriod" type="ValidityPeriodAssociationType">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">Global ValidityPeriod association.</xsd:documentation>
+        </xsd:annotation>
+    </xsd:element>
+    <xsd:element name="ValidityPeriodConstraint" type="ValidityPeriodConstraintAssociationType">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">Global ValidityPeriodConstraint association.</xsd:documentation>
+        </xsd:annotation>
+    </xsd:element>
+    
+    <xsd:element name="ConstrainsAugmentationPoint" abstract="true">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">Global Constrains AugmentationPoint association.</xsd:documentation>
+        </xsd:annotation>
+    </xsd:element>
+    <xsd:element name="EvidenceIsIssuedByAugmentationPoint" abstract="true">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">Global EvidenceIsIssuedBy AugmentationPoint association.</xsd:documentation>
+        </xsd:annotation>
+    </xsd:element>
+    <xsd:element name="HasConceptAugmentationPoint" abstract="true">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">Global HasConcept AugmentationPoint association.</xsd:documentation>
+        </xsd:annotation>
+    </xsd:element> 
+    <xsd:element name="HasEvidenceTypeListAugmentationPoint" abstract="true">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">Global HasEvidenceTypeList AugmentationPoint association.</xsd:documentation>
+        </xsd:annotation>
+    </xsd:element> 
+    <xsd:element name="HasQualifiedRelationAugmentationPoint" abstract="true">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">Global HasQualifiedRelation AugmentationPoint association.</xsd:documentation>
+        </xsd:annotation>
+    </xsd:element>  
+    <xsd:element name="HasRequirementAugmentationPoint" abstract="true">
+         <xsd:annotation>
+            <xsd:documentation xml:lang="en">Global HasRequirement AugmentationPoint association.</xsd:documentation>
+        </xsd:annotation>
+    </xsd:element>
+    <xsd:element name="HasSupportingEvidenceAugmentationPoint" abstract="true">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">Global HasSupportingEvidence AugmentationPoint association.</xsd:documentation>
+        </xsd:annotation>
+    </xsd:element> 
+    <xsd:element name="IsAboutAugmentationPoint" abstract="true">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">Global IsAbout AugmentationPointt association.</xsd:documentation>
+        </xsd:annotation>
+    </xsd:element> 
+    <xsd:element name="IsConformantToAugmentationPoint" abstract="true">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">Global IsConformantTo AugmentationPoint association.</xsd:documentation>
+        </xsd:annotation>
+    </xsd:element> 
+    <xsd:element name="IsCreatedByAugmentationPoint" abstract="true">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">Global IsCreatedBy AugmentationPoint association.</xsd:documentation>
+        </xsd:annotation>
+    </xsd:element>
+    <xsd:element name="IsDerivedFromAugmentationPoint" abstract="true">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">Global IsDerivedFrom AugmentationPoint association.</xsd:documentation>
+        </xsd:annotation>
+    </xsd:element>    
+    <xsd:element name="IsRequirementOfAugmentationPoint" abstract="true">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">Global IsRequirementOf AugmentationPoint association.</xsd:documentation>
+        </xsd:annotation>
+    </xsd:element> 
+    <xsd:element name="IsSpecifiedInAugmentationPoint" abstract="true">
+         <xsd:annotation>
+            <xsd:documentation xml:lang="en">Global IsSpecifiedIn AugmentationPoint association.</xsd:documentation>
+        </xsd:annotation>
+    </xsd:element> 
+    <xsd:element name="ProvidesValueForAugmentationPoint" abstract="true">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">Global ProvidesValueFor AugmentationPoint association.</xsd:documentation>
+        </xsd:annotation>
+    </xsd:element> 
+    <xsd:element name="RequirementIsIssuedByAugmentationPoint" abstract="true">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">Global RequirementIsIssuedBy AugmentationPoint association.</xsd:documentation>
+        </xsd:annotation>
+    </xsd:element> 
+    <xsd:element name="SpecifiesEvidenceTypeAugmentationPoint" abstract="true">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">Global SpecifiesEvidenceType AugmentationPoint association.</xsd:documentation>
+        </xsd:annotation>
+    </xsd:element> 
+    <xsd:element name="SupportsConceptAugmentationPoint" abstract="true">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">Global SupportsConcept AugmentationPoint association.</xsd:documentation>
+        </xsd:annotation>
+    </xsd:element>
+    <xsd:element name="SupportsRequirementAugmentationPoint" abstract="true">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">Global SupportsRequirement AugmentationPoint association.</xsd:documentation>
+        </xsd:annotation>
+    </xsd:element> 
+    <xsd:element name="SupportsValueAugmentationPoint" abstract="true">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">Global SupportsValue AugmentationPoint association.</xsd:documentation>
+        </xsd:annotation>
+    </xsd:element> 
+    <xsd:element name="ValidityPeriodAugmentationPoint" abstract="true">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">Global ValidityPeriod AugmentationPoint association.</xsd:documentation>
+        </xsd:annotation>
+    </xsd:element> 
+    <xsd:element name="ValidityPeriodConstraintAugmentationPoint" abstract="true">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">Global ValidityPeriodConstraint AugmentationPoint association.</xsd:documentation>
+        </xsd:annotation>
+    </xsd:element> 
+
+    <xsd:attribute name="AgentRef" type="xsd:IDREFS">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">Reference to Agent ID.</xsd:documentation>
+        </xsd:annotation>
+    </xsd:attribute>
+    <xsd:attribute name="EvidenceRef" type="xsd:IDREFS">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">Reference to Evidence ID.</xsd:documentation>
+        </xsd:annotation>
+    </xsd:attribute>
+    <xsd:attribute name="EvidenceTypeListRef" type="xsd:IDREFS">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">Reference to EvidenceTypeList ID.</xsd:documentation>
+        </xsd:annotation>
+    </xsd:attribute>
+    <xsd:attribute name="EvidenceTypeRef" type="xsd:IDREFS">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">Reference to EvidenceType ID.</xsd:documentation>
+        </xsd:annotation>
+    </xsd:attribute>    
+    <xsd:attribute name="InformationConceptRef" type="xsd:IDREFS">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">Reference to InformationConcept ID.</xsd:documentation>
+        </xsd:annotation>
+    </xsd:attribute>  
+    <xsd:attribute name="PeriodOfTimeRef" type="xsd:IDREFS">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">Reference to PeriodOfTime ID.</xsd:documentation>
+        </xsd:annotation>
+    </xsd:attribute>  
+    <xsd:attribute name="ReferenceFrameworkRef" type="xsd:IDREFS">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">Reference to ReferenceFramework ID.</xsd:documentation>
+        </xsd:annotation>
+    </xsd:attribute>  
+    <xsd:attribute name="RequirementRef" type="xsd:IDREFS">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">Reference to Requirement ID.</xsd:documentation>
+        </xsd:annotation>
+    </xsd:attribute>  
+    <xsd:attribute name="SupportedValueRef" type="xsd:IDREFS">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">Reference to SupportedValu ID.</xsd:documentation>
+        </xsd:annotation>
+    </xsd:attribute>  
+   
+    <xsd:complexType name="AgentType">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">Any entity that is able to carry out actions.</xsd:documentation>
+        </xsd:annotation>
+       <xsd:sequence>
+            <xsd:element ref="AgentAugmentationPoint" minOccurs="0" maxOccurs="unbounded"/>
+        </xsd:sequence>
+        <xsd:attribute ref="id" />
+    </xsd:complexType>
+
+    <xsd:complexType name="ConstraintType">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">A limitation applied to Requirement(s) or to the Information Concept(s) the Requirement is about.</xsd:documentation>
+        </xsd:annotation>
+        <xsd:complexContent>
+            <xsd:extension base="RequirementType">
+            	<xsd:sequence>
+            		<xsd:element ref="ConstraintAugmentationPoint" minOccurs="0" maxOccurs="unbounded"/>
+            	</xsd:sequence>
+            </xsd:extension>
+        </xsd:complexContent>
+    </xsd:complexType>
+
+    <xsd:complexType name="CriterionType">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">A condition for evaluation or assessment.</xsd:documentation>
+        </xsd:annotation>
+        <xsd:complexContent>
+            <xsd:extension base="RequirementType">
+                <xsd:sequence>
+                    <xsd:element ref="Bias" minOccurs="0" maxOccurs="unbounded">
+                    	<xsd:annotation>
+            				<xsd:documentation xml:lang="en">Additional parameter(s) used to adjust the evaluation of the Criterion composed of multiple sub-Criteria and their respective weights.</xsd:documentation>
+        				</xsd:annotation>
+                    </xsd:element>
+                    <xsd:element ref="Weight" minOccurs="0" maxOccurs="unbounded">
+                    	<xsd:annotation>
+            				<xsd:documentation xml:lang="en">Relative importance assigned to a given Criterion.</xsd:documentation>
+        				</xsd:annotation>
+                    </xsd:element>
+                    <xsd:element ref="WeightingConsiderationDescription" minOccurs="0" maxOccurs="unbounded">
+                        <xsd:annotation>
+            				<xsd:documentation xml:lang="en">The explanation of how the weighting of a Criterion is to be used at evaluation time.</xsd:documentation>
+        				</xsd:annotation>
+                    </xsd:element>
+                    <xsd:element ref="WeightingTypeProperty" minOccurs="0" maxOccurs="unbounded">
+                       	<xsd:annotation>
+            				<xsd:documentation xml:lang="en">The numeric form used to weight.</xsd:documentation>
+        				</xsd:annotation>
+                    </xsd:element>
+                    <xsd:element ref="CriterionAugmentationPoint" minOccurs="0" maxOccurs="unbounded"/>
+                </xsd:sequence>
+            </xsd:extension>
+        </xsd:complexContent>
+    </xsd:complexType>
+
+    <xsd:complexType name="DatasetType">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">A collection of data.</xsd:documentation>
+        </xsd:annotation>
+        <xsd:sequence>
+            <xsd:element ref="Identifier" minOccurs="0" maxOccurs="unbounded">
+            	<xsd:annotation>
+            		<xsd:documentation xml:lang="en">An unambiguous reference to a Dataset.</xsd:documentation>
+        		</xsd:annotation>
+            </xsd:element>
+            <xsd:element ref="DatasetAugmentationPoint" minOccurs="0" maxOccurs="unbounded"/>
+        </xsd:sequence>
+        <xsd:attribute ref="id" />
+    </xsd:complexType>
+
+    <xsd:complexType name="EvidenceType">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">The data proving that a Requirement is met or has been fulfilled.</xsd:documentation>
+        </xsd:annotation>
+        <xsd:complexContent>
+            <xsd:extension base="DatasetType">
+                <xsd:sequence>
+                    <xsd:element ref="ConfidentialityLevelTypeProperty" minOccurs="0" maxOccurs="unbounded">
+            			<xsd:annotation>
+            				<xsd:documentation xml:lang="en">The security classification assigned to an Evidence or, in general, to a content.</xsd:documentation>
+        				</xsd:annotation>
+                    </xsd:element>
+                    <xsd:element ref="IsAbout" minOccurs="0" maxOccurs="unbounded" />
+                    <xsd:element ref="IsConformantTo" minOccurs="0" maxOccurs="unbounded" />
+                    <xsd:element ref="IsCreatedBy" minOccurs="0" maxOccurs="unbounded" />
+                    <xsd:element ref="EvidenceIsIssuedBy" minOccurs="0" maxOccurs="unbounded" />
+                    <xsd:element ref="SupportsRequirement" minOccurs="0" maxOccurs="unbounded" />
+                    <xsd:element ref="SupportsValue" minOccurs="0" maxOccurs="unbounded" />
+                    <xsd:element ref="ValidityPeriod" minOccurs="0" maxOccurs="unbounded" />
+                    <xsd:element ref="EvidenceAugmentationPoint" minOccurs="0" maxOccurs="unbounded"/>
+                </xsd:sequence>
+            </xsd:extension>
+        </xsd:complexContent>
+    </xsd:complexType>
+
+    <xsd:complexType name="EvidenceTypeType">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">Information about the characteristics of an expected Evidence.</xsd:documentation>
+        </xsd:annotation>
+        <xsd:sequence>
+            <xsd:element ref="EvidenceTypeClassification" minOccurs="0" maxOccurs="unbounded">
+           		<xsd:annotation>
+           			<xsd:documentation xml:lang="en">A classification code to specify the layout and content expected for an Evidence.</xsd:documentation>
+       			</xsd:annotation>
+            </xsd:element>
+            <xsd:element ref="Identifier" minOccurs="0" maxOccurs="unbounded">
+           		<xsd:annotation>
+           			<xsd:documentation xml:lang="en">An unambiguous reference to an Evidence Type.</xsd:documentation>
+       			</xsd:annotation>
+            </xsd:element>
+            <xsd:element ref="IsSpecifiedIn" minOccurs="0" maxOccurs="unbounded" />
+            <xsd:element ref="ValidityPeriodConstraint" minOccurs="0" maxOccurs="unbounded" />
+            <xsd:element ref="EvidenceTypeAugmentationPoint" minOccurs="0" maxOccurs="unbounded"/>
+        </xsd:sequence>
+        <xsd:attribute ref="id" />
+    </xsd:complexType>
+
+    <xsd:complexType name="EvidenceTypeListType">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">A combination of Evidence Types for each of which a conforming Evidence must be provided.</xsd:documentation>
+        </xsd:annotation>
+        <xsd:sequence>
+            <xsd:element ref="Description" minOccurs="0" maxOccurs="unbounded">
+         		<xsd:annotation>
+         			<xsd:documentation xml:lang="en">A short explanation about the nature, attributes, uses or any other additional information that helps clarify the understanding of the Evidence Type being instantiated.</xsd:documentation>
+     			</xsd:annotation>           
+            </xsd:element>
+            <xsd:element ref="Identifier" minOccurs="0" maxOccurs="unbounded">
+                <xsd:annotation>
+           			<xsd:documentation xml:lang="en">An unambiguous reference to an Evidence Type List.</xsd:documentation>
+       			</xsd:annotation>
+            </xsd:element>
+            <xsd:element ref="Name" minOccurs="0" maxOccurs="unbounded">
+                <xsd:annotation>
+           			<xsd:documentation xml:lang="en">The name of the Evidence Type List.</xsd:documentation>
+       			</xsd:annotation>
+            </xsd:element>
+            <xsd:element ref="SpecifiesEvidenceTypeAssociation" minOccurs="0" maxOccurs="unbounded" />
+            <xsd:element ref="EvidenceTypeListAugmentationPoint" minOccurs="0" maxOccurs="unbounded"/>
+        </xsd:sequence>
+        <xsd:attribute ref="id" />
+    </xsd:complexType>
+
+    <xsd:complexType name="InformationConceptType">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">A reference to an entity, i.e. a class or a property, which is used to describe information in the Evidence to be provided for the Requirement specified.</xsd:documentation>
+        </xsd:annotation>
+        <xsd:sequence>
+            <xsd:element ref="Description" minOccurs="0" maxOccurs="unbounded">
+                <xsd:annotation>
+           			<xsd:documentation xml:lang="en">A short explanation about the nature, attributes, uses or any other additional information that helps clarify the understanding of the Information Concept being instantiated.</xsd:documentation>
+       			</xsd:annotation>            
+            </xsd:element>
+            <xsd:element ref="ExpressionOfExpectedValue" minOccurs="0" maxOccurs="unbounded">
+                <xsd:annotation>
+           			<xsd:documentation xml:lang="en">An expression (function) of the value that the Requirement expects.</xsd:documentation>
+       			</xsd:annotation>
+            </xsd:element>
+            <xsd:element ref="Identifier" minOccurs="0" maxOccurs="unbounded">
+                <xsd:annotation>
+           			<xsd:documentation xml:lang="en">An unambiguous reference to the Information Concept.</xsd:documentation>
+       			</xsd:annotation>
+            </xsd:element>
+            <xsd:element ref="Name" minOccurs="0" maxOccurs="unbounded">
+                <xsd:annotation>
+           			<xsd:documentation xml:lang="en">A name of the Information Concept.</xsd:documentation>
+       			</xsd:annotation>
+            </xsd:element>
+            <xsd:element ref="TypeProperty" minOccurs="0" maxOccurs="unbounded">
+                 <xsd:annotation>
+           			<xsd:documentation xml:lang="en">A classification of the Information Concept.</xsd:documentation>
+       			</xsd:annotation>
+            </xsd:element>
+           <xsd:element ref="InformationConceptAugmentationPoint" minOccurs="0" maxOccurs="unbounded"/>
+        </xsd:sequence>
+        <xsd:attribute ref="id" />
+    </xsd:complexType>
+
+    <xsd:complexType name="InformationRequirementType">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">A request for data that is proof of Evidence or that leads to the source of such a proof.</xsd:documentation>
+        </xsd:annotation>
+        <xsd:complexContent>
+            <xsd:extension base="RequirementType">
+	            <xsd:sequence>
+	            	<xsd:element ref="InformationRequirementAugmentationPoint" minOccurs="0" maxOccurs="unbounded"/>
+	            </xsd:sequence>
+            </xsd:extension>
+        </xsd:complexContent>
+    </xsd:complexType>
+
+    <xsd:complexType name="LocationType">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">An identifiable geographic place or named place.</xsd:documentation>
+        </xsd:annotation>
+        <xsd:sequence>
+	   		<xsd:element ref="LocationAugmentationPoint" minOccurs="0" maxOccurs="unbounded"/>
+	    </xsd:sequence>
+        <xsd:attribute ref="id" />
+    </xsd:complexType>
+
+    <xsd:complexType name="PeriodOfTimeType">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">A temporal entity with non-zero extent or duration, i.e. for which the value of the beginning and end are different.</xsd:documentation>
+        </xsd:annotation> 
+        <xsd:sequence>
+            <xsd:element ref="PeriodOfTime" minOccurs="0" maxOccurs="unbounded">
+		        <xsd:annotation>
+		            <xsd:documentation xml:lang="en">Extent of the Period of Time.</xsd:documentation>
+		        </xsd:annotation>            
+            </xsd:element>
+            <xsd:element ref="EndTime" minOccurs="0" maxOccurs="unbounded">
+            	<xsd:annotation>
+		            <xsd:documentation xml:lang="en">Date and time information indicating the end of the Period.</xsd:documentation>
+		        </xsd:annotation> 
+            </xsd:element>
+            <xsd:element ref="StartTime" minOccurs="0" maxOccurs="unbounded">
+                <xsd:annotation>
+		            <xsd:documentation xml:lang="en">Date and time information indicating the beginning of the Period.</xsd:documentation>
+		        </xsd:annotation> 
+            </xsd:element>
+            <xsd:element ref="PeriodOfTimeAugmentationPoint" minOccurs="0" maxOccurs="unbounded"/>
+        </xsd:sequence>
+        <xsd:attribute ref="id" />
+    </xsd:complexType>
+
+    <xsd:complexType name="ReferenceFrameworkType">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">A source from where Requirements are identified and derived.</xsd:documentation>
+        </xsd:annotation>
+        <xsd:sequence>
+            <xsd:element ref="Identifier" minOccurs="0" maxOccurs="unbounded">
+                <xsd:annotation>
+		            <xsd:documentation xml:lang="en">An unambiguous reference to a Reference Framework.</xsd:documentation>
+		        </xsd:annotation> 
+            </xsd:element>
+            <xsd:element ref="ReferenceFrameworkAugmentationPoint" minOccurs="0" maxOccurs="unbounded"/>
+        </xsd:sequence>
+        <xsd:attribute ref="id" />
+    </xsd:complexType>
+
+    <xsd:complexType name="RequirementType">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">A condition or prerequisite that someone requests and someone else has to meet.</xsd:documentation>
+        </xsd:annotation>
+        <xsd:sequence>
+            <xsd:element ref="Description" minOccurs="0" maxOccurs="unbounded">
+                <xsd:annotation>
+		            <xsd:documentation xml:lang="en">A short explanation about the nature, attributes, uses or any other additional information that helps clarify the understanding of the Requirement being instantiated.</xsd:documentation>
+		        </xsd:annotation>            	
+            </xsd:element>
+            <xsd:element ref="HasQualifiedRelation"  minOccurs="0" maxOccurs="unbounded" />
+            <xsd:element ref="HasRequirement" minOccurs="0" maxOccurs="unbounded" />
+            <xsd:element ref="Identifier" minOccurs="0" maxOccurs="unbounded">
+                <xsd:annotation>
+		            <xsd:documentation xml:lang="en">An unambiguous reference to a Requirement.</xsd:documentation>
+		        </xsd:annotation>             	
+            </xsd:element>
+            <xsd:element ref="IsRequirementOf" minOccurs="0" maxOccurs="unbounded" />
+            <xsd:element ref="RequirementIsIssuedBy " minOccurs="0" maxOccurs="unbounded" />
+            <xsd:element ref="Name" minOccurs="0" maxOccurs="unbounded">
+            	<xsd:annotation>
+		            <xsd:documentation xml:lang="en">A name to identify in common language the Requirement.</xsd:documentation>
+		        </xsd:annotation>   
+		    </xsd:element>
+            <xsd:element ref="TypeProperty" minOccurs="0" maxOccurs="unbounded">
+            	<xsd:annotation>
+		            <xsd:documentation xml:lang="en">The category or type to which the requirement belongs.</xsd:documentation>
+		        </xsd:annotation>
+            </xsd:element>
+            <xsd:element ref="RequirementAugmentationPoint" minOccurs="0" maxOccurs="unbounded"/>
+        </xsd:sequence>
+        <xsd:attribute ref="id" />
+    </xsd:complexType>
+
+    <xsd:complexType name="SupportedValueType">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">A value for an Information Concept that is supported by an Evidence.</xsd:documentation>
+        </xsd:annotation>
+        <xsd:sequence>
+        	<xsd:element ref="ProvidesValueFor" minOccurs="0" maxOccurs="unbounded" />
+            <xsd:element ref="Query" minOccurs="0" maxOccurs="unbounded">
+                <xsd:annotation>
+		            <xsd:documentation xml:lang="en">The query via which the value for the Information Concept can be retrieved. The query must be executed on the business data provided by the supporting Evidence.</xsd:documentation>
+		        </xsd:annotation>
+            </xsd:element>
+            <xsd:element ref="Value" minOccurs="0" maxOccurs="unbounded">
+                <xsd:annotation>
+		            <xsd:documentation xml:lang="en">The value for the Information Concept that the Evidence is supporting..</xsd:documentation>
+		        </xsd:annotation>            
+            </xsd:element>
+            <xsd:element ref="SupportedValueAugmentationPoint" minOccurs="0" maxOccurs="unbounded"/>
+        </xsd:sequence>
+        <xsd:attribute ref="id" />
+    </xsd:complexType>
+
+    <xsd:complexType name="ConstrainsAssociationType">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">The Information Concept about which a Constraint expresses a limitation.</xsd:documentation>
+        </xsd:annotation>
+        <xsd:complexContent>
+            <xsd:extension base="AssociationType">
+                <xsd:sequence>
+                    <xsd:element ref="InformationConcept" minOccurs="0" maxOccurs="unbounded"/>
+                    <xsd:element ref="ConstrainsAugmentationPoint" minOccurs="0" maxOccurs="unbounded"/>
+                </xsd:sequence>
+                <xsd:attribute ref="InformationConceptRef"/>
+            </xsd:extension>
+        </xsd:complexContent>
+    </xsd:complexType>
+    
+    <xsd:complexType name="EvidenceIsIssuedByAssociationType">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">The Agent that produces the Evidence.</xsd:documentation>
+        </xsd:annotation>
+        <xsd:complexContent>
+            <xsd:extension base="AssociationType">
+                <xsd:sequence>
+                    <xsd:element ref="Agent" minOccurs="0" maxOccurs="unbounded" />
+                    <xsd:element ref="EvidenceIsIssuedByAugmentationPoint" minOccurs="0" maxOccurs="unbounded"/>
+                </xsd:sequence>
+                <xsd:attribute ref="AgentRef"/>
+            </xsd:extension>
+        </xsd:complexContent>
+    </xsd:complexType>
+    
+    <xsd:complexType name="HasConceptAssociationType">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">The Information Concept for which the Requirement expects a support in the supporting Evidence.</xsd:documentation>
+        </xsd:annotation>
+        <xsd:complexContent>
+            <xsd:extension base="AssociationType">
+                 <xsd:sequence>
+                    <xsd:element ref="InformationConcept" minOccurs="0" maxOccurs="unbounded" />
+                    <xsd:element ref="HasConceptAugmentationPoint" minOccurs="0" maxOccurs="unbounded"/>
+                </xsd:sequence>
+                <xsd:attribute ref="InformationConceptRef"/>
+            </xsd:extension>
+        </xsd:complexContent>
+    </xsd:complexType>
+    
+    <xsd:complexType name="HasEvidenceTypeListAssociationType">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">The single or various combinations of Evidence Types for supporting a Requirement. Out of the different Lists, one of them must be satisfied by the response to the Requirement.</xsd:documentation>
+        </xsd:annotation>
+        <xsd:complexContent>
+            <xsd:extension base="AssociationType">
+                 <xsd:sequence>
+                    <xsd:element ref="EvidenceTypeList" minOccurs="0" maxOccurs="unbounded" />
+                    <xsd:element ref="HasEvidenceTypeListAugmentationPoint" minOccurs="0" maxOccurs="unbounded"/>
+                </xsd:sequence>
+                <xsd:attribute ref="EvidenceTypeListRef"/>
+            </xsd:extension>
+        </xsd:complexContent>
+    </xsd:complexType>
+    
+    <xsd:complexType name="HasQualifiedRelationAssociationType">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">A described and/or categorised relation to the instance of another Requirement class or subclass.</xsd:documentation>
+        </xsd:annotation>
+        <xsd:complexContent>
+            <xsd:extension base="AssociationType">
+                <xsd:sequence>
+                    <xsd:element ref="Requirement" minOccurs="0" maxOccurs="unbounded" />
+                    <xsd:element ref="HasQualifiedRelationAugmentationPoint" minOccurs="0" maxOccurs="unbounded"/>
+                </xsd:sequence>
+                <xsd:attribute ref="RequirementRef"/>
+            </xsd:extension>
+        </xsd:complexContent>
+    </xsd:complexType>
+    
+    <xsd:complexType name="HasRequirementAssociationType">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">A sub-Requirement.</xsd:documentation>
+        </xsd:annotation>
+        <xsd:complexContent>
+            <xsd:extension base="AssociationType">
+                <xsd:sequence>
+                    <xsd:element ref="Requirement" minOccurs="0" maxOccurs="unbounded" />
+                    <xsd:element ref="HasRequirementAugmentationPoint" minOccurs="0" maxOccurs="unbounded"/>
+                </xsd:sequence>
+                <xsd:attribute ref="RequirementRef"/>
+            </xsd:extension>
+        </xsd:complexContent>
+    </xsd:complexType>
+
+    <xsd:complexType name="HasSupportingEvidenceAssociationType">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">The Evidence that supplies information (proof, support) for this Requirement.</xsd:documentation>
+        </xsd:annotation>
+        <xsd:complexContent>
+            <xsd:extension base="AssociationType">
+                <xsd:sequence>
+                    <xsd:element ref="Evidence" minOccurs="0" maxOccurs="unbounded" />
+                    <xsd:element ref="HasSupportingEvidenceAugmentationPoint" minOccurs="0" maxOccurs="unbounded"/>
+                </xsd:sequence>
+                <xsd:attribute ref="EvidenceRef"/>
+            </xsd:extension>
+        </xsd:complexContent>
+    </xsd:complexType>
+    
+    <xsd:complexType name="IsAboutAssociationType">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">The Agent that is the main actor in the provided Evidence.</xsd:documentation>
+        </xsd:annotation>
+        <xsd:complexContent>
+            <xsd:extension base="AssociationType">
+                <xsd:sequence>
+                    <xsd:element ref="Agent" minOccurs="0" maxOccurs="unbounded" />
+                    <xsd:element ref="IsAboutAugmentationPoint" minOccurs="0" maxOccurs="unbounded"/>
+                </xsd:sequence>
+                <xsd:attribute ref="AgentRef"/>
+            </xsd:extension>
+        </xsd:complexContent>
+    </xsd:complexType>
+
+   <xsd:complexType name="IsConformantToAssociationType">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">A reference to one or more types of Evidence where the content and, possibly, the layout or configuration of the Evidence is specified.</xsd:documentation>
+        </xsd:annotation>
+        <xsd:complexContent>
+            <xsd:extension base="AssociationType">
+                <xsd:sequence>
+                    <xsd:element ref="EvidenceTypeClass" minOccurs="0" maxOccurs="unbounded" />
+                    <xsd:element ref="IsConformantToAugmentationPoint" minOccurs="0" maxOccurs="unbounded"/>
+                </xsd:sequence>
+                <xsd:attribute ref="EvidenceTypeRef"/>
+            </xsd:extension>
+        </xsd:complexContent>
+    </xsd:complexType>
+
+    <xsd:complexType name="IsCreatedByAssociationType">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">The Agent that produces the Evidence.</xsd:documentation>
+        </xsd:annotation>
+        <xsd:complexContent>
+            <xsd:extension base="AssociationType">
+                <xsd:sequence>
+                    <xsd:element ref="Agent" minOccurs="0" maxOccurs="unbounded" />
+                    <xsd:element ref="IsCreatedByAugmentationPoint" minOccurs="0" maxOccurs="unbounded"/>
+                </xsd:sequence>
+                <xsd:attribute ref="AgentRef"/>
+            </xsd:extension>
+        </xsd:complexContent>
+    </xsd:complexType>
+    
+    <xsd:complexType name="IsDerivedFromAssociationType">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">The Reference Framework that is responsible for the creation/initiation of the Requirement.</xsd:documentation>
+        </xsd:annotation>
+        <xsd:complexContent>
+            <xsd:extension base="AssociationType">
+                <xsd:sequence>
+                    <xsd:element ref="ReferenceFramework" minOccurs="0" maxOccurs="unbounded" />
+                    <xsd:element ref="IsDerivedFromAugmentationPoint" minOccurs="0" maxOccurs="unbounded"/>
+                </xsd:sequence>
+                <xsd:attribute ref="ReferenceFrameworkRef"/>
+            </xsd:extension>
+        </xsd:complexContent>
+    </xsd:complexType>
+    
+    <xsd:complexType name="IsRequirementOfAssociationType">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">A reference between a sub-Requirement and its parent, more general, Requirement.</xsd:documentation>
+        </xsd:annotation>
+        <xsd:complexContent>
+            <xsd:extension base="AssociationType">
+            	<xsd:sequence>
+                    <xsd:element ref="Requirement" minOccurs="0" maxOccurs="unbounded" />
+                    <xsd:element ref="IsRequirementOfAugmentationPoint" minOccurs="0" maxOccurs="unbounded"/>
+                </xsd:sequence>
+                <xsd:attribute ref="RequirementRef"/>
+            </xsd:extension>
+        </xsd:complexContent>
+    </xsd:complexType>
+
+    <xsd:complexType name="IsSpecifiedInAssociationType">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">Refers to an Evidence Type List in which the Evidence Type is included.</xsd:documentation>
+        </xsd:annotation>
+        <xsd:complexContent>
+            <xsd:extension base="AssociationType">
+                <xsd:sequence>
+                    <xsd:element ref="EvidenceTypeList" minOccurs="0" maxOccurs="unbounded" />
+                    <xsd:element ref="IsSpecifiedInAugmentationPoint" minOccurs="0" maxOccurs="unbounded"/>
+                </xsd:sequence>
+                <xsd:attribute ref="EvidenceTypeListRef"/>
+            </xsd:extension>
+        </xsd:complexContent>
+    </xsd:complexType>
+    
+    <xsd:complexType name="ProvidesValueForAssociationType">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">The Information Concept for which the Supported Value is providing a value.</xsd:documentation>
+        </xsd:annotation>
+        <xsd:complexContent>
+            <xsd:extension base="AssociationType">
+                <xsd:sequence>
+                    <xsd:element ref="InformationConcept" minOccurs="0" maxOccurs="unbounded" />
+                    <xsd:element ref="ProvidesValueForAugmentationPoint" minOccurs="0" maxOccurs="unbounded"/>
+                </xsd:sequence>
+                <xsd:attribute ref="InformationConceptRef"/>
+            </xsd:extension>
+        </xsd:complexContent>
+    </xsd:complexType>
+
+    <xsd:complexType name="RequirementIsIssuedByAssociationType">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">The Agent that has published the Requirement.</xsd:documentation>
+        </xsd:annotation>
+        <xsd:complexContent>
+            <xsd:extension base="AssociationType">
+            	<xsd:sequence>
+                    <xsd:element ref="Agent" minOccurs="0" maxOccurs="unbounded" />
+                    <xsd:element ref="RequirementIsIssuedByAugmentationPoint" minOccurs="0" maxOccurs="unbounded"/>
+                </xsd:sequence>
+                <xsd:attribute ref="AgentRef"/>
+            </xsd:extension>
+        </xsd:complexContent>
+    </xsd:complexType>
+
+    <xsd:complexType name="SpecifiesEvidenceTypeAssociationType">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">Indicates one Type of Evidence included in a List of Evidence Types.</xsd:documentation>
+        </xsd:annotation>
+        <xsd:complexContent>
+            <xsd:extension base="AssociationType">
+                <xsd:sequence>
+                    <xsd:element ref="EvidenceTypeClass" minOccurs="0" maxOccurs="unbounded" />
+                    <xsd:element ref="SpecifiesEvidenceTypeAugmentationPoint" minOccurs="0" maxOccurs="unbounded"/>
+                </xsd:sequence>
+                <xsd:attribute ref="EvidenceTypeRef"/>
+            </xsd:extension>
+        </xsd:complexContent>
+    </xsd:complexType>
+
+    <xsd:complexType name="SupportsConceptAssociationType">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">The Information Concept that is supported by the Evidence.</xsd:documentation>
+        </xsd:annotation>
+        <xsd:complexContent>
+            <xsd:extension base="AssociationType">
+                <xsd:sequence>
+                    <xsd:element ref="InformationConcept" minOccurs="0" maxOccurs="unbounded" />
+                    <xsd:element ref="SupportsConceptAugmentationPoint" minOccurs="0" maxOccurs="unbounded"/>
+                </xsd:sequence>
+                <xsd:attribute ref="InformationConceptRef"/>
+            </xsd:extension>
+        </xsd:complexContent>
+    </xsd:complexType>
+    
+    <xsd:complexType name="SupportsRequirementAssociationType">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">The Requirement for which the Evidence provides information (proof, support).</xsd:documentation>
+        </xsd:annotation>
+        <xsd:complexContent>
+            <xsd:extension base="AssociationType">
+                <xsd:sequence>
+                    <xsd:element ref="Requirement" minOccurs="0" maxOccurs="unbounded" />
+                    <xsd:element ref="SupportsRequirementAugmentationPoint" minOccurs="0" maxOccurs="unbounded"/>
+                </xsd:sequence>
+                <xsd:attribute ref="RequirementRef"/>
+            </xsd:extension>
+        </xsd:complexContent>
+    </xsd:complexType>
+
+    <xsd:complexType name="SupportsValueAssociationType">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">The Supported Value for which an Evidence holds information.</xsd:documentation>
+        </xsd:annotation>
+        <xsd:complexContent>
+            <xsd:extension base="AssociationType">
+                <xsd:sequence>
+                    <xsd:element ref="SupportedValue" minOccurs="0" maxOccurs="unbounded" />
+                    <xsd:element ref="SupportsValueAugmentationPoint" minOccurs="0" maxOccurs="unbounded"/>
+                </xsd:sequence>
+                <xsd:attribute ref="SupportedValueRef"/>
+            </xsd:extension>
+        </xsd:complexContent>
+    </xsd:complexType>
+
+    <xsd:complexType name="ValidityPeriodAssociationType">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">Indicates the validity period of the Evidence.</xsd:documentation>
+        </xsd:annotation>
+        <xsd:complexContent>
+            <xsd:extension base="AssociationType">
+                <xsd:sequence>
+                    <xsd:element ref="PeriodOfTime" minOccurs="0" maxOccurs="unbounded" />
+                    <xsd:element ref="ValidityPeriodAugmentationPoint" minOccurs="0" maxOccurs="unbounded"/>
+                </xsd:sequence>
+                <xsd:attribute ref="PeriodOfTimeRef"/>
+            </xsd:extension>
+        </xsd:complexContent>
+    </xsd:complexType>
+
+    <xsd:complexType name="ValidityPeriodConstraintAssociationType">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">Indicates a temporal constraint on the validity period of the Evidence Type.</xsd:documentation>
+        </xsd:annotation>
+        <xsd:complexContent>
+            <xsd:extension base="AssociationType">
+                <xsd:sequence>
+                    <xsd:element ref="PeriodOfTime" minOccurs="0" maxOccurs="unbounded" />
+                    <xsd:element ref="ValidityPeriodConstraintAugmentationPoint" minOccurs="0" maxOccurs="unbounded"/>
+                </xsd:sequence>
+                <xsd:attribute ref="PeriodOfTimeRef" use="optional"/>
+            </xsd:extension>
+        </xsd:complexContent>
+    </xsd:complexType>
+
+    <xsd:attribute name="id" type="xsd:ID">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">A document-relative identifier for an XML element.</xsd:documentation>
+        </xsd:annotation>
+    </xsd:attribute>
+
+    <xsd:attribute name="uri" type="xsd:anyURI">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">An internationalized resource identifier or uniform resource identifier for a node or object.</xsd:documentation>
+        </xsd:annotation>
+    </xsd:attribute>
+
+    <xsd:attribute name="languageID" type="xsd:language">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">The language of the type</xsd:documentation>
+        </xsd:annotation>
+    </xsd:attribute>
+
+    <xsd:simpleType name="LiteralSimpleType">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">A data type for a thing with its own lifespan that has some existence.</xsd:documentation>
+        </xsd:annotation>
+        <xsd:union memberTypes="xsd:int xsd:string" />
+    </xsd:simpleType>
+
+    <xsd:complexType name="TextType">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">A character string (i.e. a finite set of characters) generally in the form of words of a language</xsd:documentation>
+        </xsd:annotation>
+        <xsd:simpleContent>
+            <xsd:extension base="xsd:string">
+                <xsd:attribute ref="languageID" />
+            </xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+
+    <xsd:complexType name="CodeType">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">A character string (letters, figures, or symbols) that for brevity and/or languange independence may be used to represent or replace a definitive value or text of an attribute together with relevant supplementary information.</xsd:documentation>
+        </xsd:annotation>
+        <xsd:simpleContent>
+            <xsd:extension base="xsd:normalizedString">
+                <xsd:attribute ref="uri" />
+            </xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+
+    <xsd:complexType name="AssociationType" abstract="true">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">A data type for a relationship between two or more objects, including any properties of that relationship.</xsd:documentation>
+        </xsd:annotation>
+        <xsd:sequence>
+      		<xsd:element ref="AssociationAugmentationPoint" minOccurs="0" maxOccurs="unbounded"/>
+   		</xsd:sequence>
+    </xsd:complexType>
+    
+    <xsd:element name="AssociationAugmentationPoint" abstract="true">
+    	<xsd:annotation>
+    	    <xsd:documentation xml:lang="en">An augmentation point for type structures:AssociationType.</xsd:documentation>
+    	</xsd:annotation>
+  	</xsd:element>
+
+</xsd:schema>
