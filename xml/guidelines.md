@@ -1,5 +1,5 @@
 **Disclaimer**
-The status of this guideline is a working draft. 
+The status of this guideline is a _**working draft**_. It SHOULD NOT be considered as an official guideline for producing or managing XML serializations for the Core Vocabularies, but it should be considered as a discussion note to investigate the expectations on XML serializations for the Core Vocabularies by reusers.
 
 # Introduction
 
@@ -116,6 +116,23 @@ See example in R4
 <tr><td> R23 </td><td> Core Vocabularies XML element, and simple and complex type names MUST NOT use acronyms, abbreviations, or other word truncations, except those in the list of exceptions maintained and published by SEMIC team </td></tr>
 <tr><td> R24 </td><td> Acronyms and abbreviations MUST appear in all upper case for all element declarations and type definitions </td></tr>
 <tr><td> R25 </td><td> Core Vocabularies XML element, and type names MUST be in singular form unless the concept itself is plural. </td></tr>
+<tr><td> R26 </td><td> The UpperCamelCase (UCC) convention MUST be used for naming elements and types,
+Example:
+
+```
+<xsd:element name="Criterion" type="CriterionType">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">Global Criterion element.</xsd:documentation>
+        </xsd:annotation>
+    </xsd:element>
+```
+ </td></tr>
+<tr><td> R27 </td><td> Present tense is preferred in naming elements and types </td></tr>
+<tr><td> R28 </td><td> Name does not have nonessential words (Articles, conjunctions, and prepositions) </td></tr>
+<tr><td> R29 </td><td> Element or attribute name follows pattern </td></tr>
+<tr><td> R30 </td><td> All elements declarations MUST be global, see example in R26 </td></tr>
+<tr><td> R31 </td><td> All types MUST be named (Complex type definition is top-level) </td></tr>
+<tr><td> R32 </td><td> All elements declaration have data definition, see example in R26 </td></tr>
 
 </table> 
  
