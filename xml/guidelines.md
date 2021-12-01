@@ -38,5 +38,81 @@ In the below table there are main principles of the Core Vocabularies XML schema
 | PR12 | Reserve inheritance for specialization | Complex type definitions in Core Vocabularies schemas SHOULD use type inheritance only for specialization. | NIEM |
 | PR13 | Be mindful of namespace cohesion | XML namespaces defined by Core Vocabularies schemas SHOULD encapsulate data components that are coherent, consistent, and internally related as a set. A namespace SHOULD encapsulate components that tend to change together. | NIEM |
 
+<table>
+<tr>
+<td> R# </td> <td> Description </td>
+</tr>
+<tr><td> R1 </td><td> Core Vocabularies schema MUST conform to the following physical layout as applicable: 
 
+```
+<!-- ======= XML Declaration======== →
+<!-- ===== XML schema Element With Namespaces Declarations and Annotation===== -->
+<!-- ===== Imports ===== →
+<!-- ===== Element Declarations ===== -->
+alphabetized order
+<!-- ===== Type Definitions ===== →
+alphabetized order
+``` 
+</td></tr>
+<tr><td> R2 </td><td> XML schema element declaration MUST be:
 
+```
+<?xml version="1.0" encoding="UTF-8"?>
+```
+
+</td></tr>
+<tr><td> R3 </td><td> The XML document MUST BE a xs:schema
+</td></tr>
+<tr><td> R4 </td><td> The xs:schema must have a data definition, in order to describe Core Vocabularies.
+
+Example:
+```
+<xsd:schema xmlns="http://data.europa.eu/m8g/"
+            xmlns:dct="http://purl.org/dc/terms/"
+            xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+            targetNamespace="http://data.europa.eu/m8g/"
+            elementFormDefault="qualified"
+            attributeFormDefault="unqualified"
+            xml:lang="en"
+            version="2.0">
+    <xsd:annotation>
+        <xsd:documentation xml:lang="en">Core Vocabularies</xsd:documentation>
+      <xsd:appinfo>
+            <dct:abstract>Core Vocabularies are simplified, reusable, and extensible data models that capture the fundamental characteristics of an entity, such as a person or a public organisation, in a context-neutral manner.</dct:abstract>
+            <dct:issued>2021-06-30</dct:issued>
+            <dct:publisher>http://publications.europa.eu/resource/authority/corporate-body/DIGIT</dct:publisher>
+            <dct:license>https://creativecommons.org/licenses/by/4.0/</dct:license>
+        </xsd:appinfo>
+    </xsd:annotation>
+```
+</td></tr>
+<tr><td> R5 </td><td> The xs:schema must have a Target Namespace, see example in R4 </td></tr>
+<tr><td> R6 </td><td> The Target Namespace MUST be an absolute URI, see example in R4 </td></tr>
+<tr><td> R7 </td><td> The Target Namespace MUST never be changed </td></tr>
+<tr><td> R8 </td><td> The xs:schema MUST have a version, see example in R4 </td></tr>
+<tr><td> R9 </td><td> The xs:schema MUST have elementFormDefault=qualified, see example in R4 </td></tr>
+<tr><td> R10 </td><td> The xs:schema MAY have attributeFormDefault=unqualified (default value), see example in R4 </td></tr>
+<tr><td> R11 </td><td> Core Vocabularies schema MAY be split into multiple schema modules </td></tr>
+<tr><td> R12 </td><td> xs:import must have a namespace </td></tr>
+<tr><td> R13 </td><td> Each xsd:schemaLocation attribute declaration MUST contain a system-resolvable URL </td></tr>
+<tr><td> R14 </td><td> Comment is not recommended </td></tr>
+<tr><td> R15 </td><td> Documentation element has no element children </td></tr>
+<tr><td> R16 </td><td> xs:documentation has xml:lang, see example in R4 </td></tr>
+<tr><td> R17 </td><td> Built-in XSD Simple Types SHOULD be used wherever possible </td></tr>
+<tr><td> R18 </td><td> All W3C XML Schema constructs in Core Vocabularies schema MUST contain the following namespace declaration on the xs schema element: 
+
+```
+          xmlns:xs="http://www.w3.org/2001/XMLSchema"
+```
+See example in R4
+</td></tr>
+<tr><td> R19 </td><td> xs:appinfo children are comments, elements, or whitespace, see example in R4 </td></tr>
+<tr><td> R20 </td><td> Appinfo child elements have namespaces, see example in R4 </td></tr>
+<tr><td> R21 </td><td> Appinfo descendants are not XML Schema elements </td></tr>
+<tr><td> R22 </td><td> Core Vocabularies XML element and type names MUST be in the English language, using the primary English spellings provided in the Oxford English Dictionary, except for those concept that imported from other vocabularies </td></tr>
+<tr><td> R23 </td><td> Core Vocabularies XML element, and simple and complex type names MUST NOT use acronyms, abbreviations, or other word truncations, except those in the list of exceptions maintained and published by SEMIC team </td></tr>
+<tr><td> R24 </td><td> Acronyms and abbreviations MUST appear in all upper case for all element declarations and type definitions </td></tr>
+<tr><td> R25 </td><td> Core Vocabularies XML element, and type names MUST be in singular form unless the concept itself is plural. </td></tr>
+
+</table> 
+ 
