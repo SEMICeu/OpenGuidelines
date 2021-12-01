@@ -20,3 +20,20 @@ This section highlights the principles and the rules under which the Core Vocabu
 Principles
 In the below table there are main principles of the Core Vocabularies XML schema, some of them are derived from existing NDR, not necessary implemented in the same way.
 
+| PR# | Title | Implementation | Sources |
+| --- | ----- | -------------- | ------- |
+| PR1 | Internet Use | Core Vocabularies will be accessed via Persistent URI, privileging resolvability over naming. Thus namespace location will provide hints where XML schemas will be found. | UBL, NIEM, |
+| Note: UBL uses URN for namespaces |
+| PR2 | Legibility | Core Vocabularies will be documented in HTML, definitions will be following rules to be reasonably clear. | UBL, NIEM |
+| PR3 | Simplicity | Core Vocabularies will be kept simple to accommodate customization, the specification SHOULD specify what is necessary for semantic interoperability and no more. | UBL, NIEM |
+| PR4 | Component Reuse | Core Vocabularies will be structured in order to maximize their reuse. Core Vocabularies schemas SHOULD NOT use or define local or anonymous components, as they adversely affect reuse. | UBL,NIEM |
+| PR5 | Easy Customization and Maintenance | Core Vocabularies schemas SHOULD be designed to enable extensions. |
+| The design process will be automated as much as possible to easy maintenance. | UBL, NIEM |
+| PR6 | Relationship to Other Namespaces  | Core Vocabularies schemas design will be cautious about making dependencies on other namespaces. | UBL |
+| PR7 | Adoption of open standards | Core Vocabularies schemas SHOULD leverage and enable use of other open standards. | NIEM |
+| PR8 | W3C XML Schema language | All Core Vocabularies design rules are based on the W3C XML Schema, so that instances can be validated against | UBL, NIEM |
+| PR9 | Using separated rules | Using separate rules allows specific conditions to be clearly stated. | NIEM |
+| PR10 | Naming consistency | Components in Core Vocabularies SHOULD be given names that are consistent with names of other Core Vocabularies components. Such names SHOULD be based on simple rules. | NIEM |
+| PR11 | Be Consistent | Component definitions in Core Vocabularies schemas SHOULD have semantic consistency. | NIEM |
+| PR12 | Reserve inheritance for specialization | Complex type definitions in Core Vocabularies schemas SHOULD use type inheritance only for specialization. | NIEM |
+| PR13 | Be mindful of namespace cohesion | XML namespaces defined by Core Vocabularies schemas SHOULD encapsulate data components that are coherent, consistent, and internally related as a set. A namespace SHOULD encapsulate components that tend to change together. | NIEM |
