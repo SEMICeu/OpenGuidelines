@@ -193,4 +193,4 @@ Example:
 ## Example serialisation
 The following files apply for CCCEV the above XML serialization CoreVocabularies-2.0.xsdrules. 
   - [Core Vocabularies XML schema](CoreVocabularies-2.0.xsd)
-  - [Core Vocabularies schematron rules] (CoreVocabularies-2.0_rules.sch)
+  - [Core Vocabularies schematron rules](CoreVocabularies-2.0_rules.sch)
