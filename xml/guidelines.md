@@ -1,4 +1,4 @@
-Introduction
+# Introduction
 
 The Core Vocabularies are semantic agreements. The semantics are expressed in human readable format, but also in machine readable formats. The Core Vocabularies use Semantic Web technology for the latter.  Besides historical reasons, it can be considered as a lightweight formalization of the semantics, as it is able to connect concrete representation with the human readable interpretation due the fact that the identifiers are dereferenceable. 
 
@@ -10,14 +10,14 @@ For XML such integration is not existing despite the design of the Semantic Web 
 
 This document documents the approach on how in a generic coherent way an XML representation can be generated for the Core Vocabularies. It will motivate the design rules applied in this process.  
 
-NOTE It must be noted that these XML representations might not be out-of-the box for a specific XML community, as they do not conform to the specific guidelines of that XML community. In that case they can be inspirational and lower the barriers for reuse of the Core Vocabulary in that XML community.
+**NOTE** It must be noted that these XML representations might not be out-of-the box for a specific XML community, as they do not conform to the specific guidelines of that XML community. In that case they can be inspirational and lower the barriers for reuse of the Core Vocabulary in that XML community.
 
-NOTE This document is a living document. It will change over time while applying the rules in practice in the generation process. This allows to document the reasoning and motivation behind decisions.
+**NOTE** This document is a living document. It will change over time while applying the rules in practice in the generation process. This allows to document the reasoning and motivation behind decisions.
 
-Guidelines
+## Guidelines
 This section highlights the principles and the rules under which the Core Vocabularies will be implemented as XML schema.
 
-Principles
+## Principles
 In the below table there are main principles of the Core Vocabularies XML schema, some of them are derived from existing NDR, not necessary implemented in the same way.
 
 | PR# | Title | Implementation | Sources |
