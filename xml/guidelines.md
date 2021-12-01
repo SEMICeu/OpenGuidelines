@@ -41,6 +41,11 @@ In the below table there are main principles of the Core Vocabularies XML schema
 | PR12 | Reserve inheritance for specialization | Complex type definitions in Core Vocabularies schemas SHOULD use type inheritance only for specialization. | NIEM |
 | PR13 | Be mindful of namespace cohesion | XML namespaces defined by Core Vocabularies schemas SHOULD encapsulate data components that are coherent, consistent, and internally related as a set. A namespace SHOULD encapsulate components that tend to change together. | NIEM |
 
+## Rules
+
+In the below table there are main rules of the Core Vocabularies XML schema, some of them are derived from existing NDR, not necessary implemented in the same way. Certain rules can be automated by using Schematron language.
+
+
 <table>
 <tr>
 <td> R# </td> <td> Description </td>
@@ -133,6 +138,57 @@ Example:
 <tr><td> R30 </td><td> All elements declarations MUST be global, see example in R26 </td></tr>
 <tr><td> R31 </td><td> All types MUST be named (Complex type definition is top-level) </td></tr>
 <tr><td> R32 </td><td> All elements declaration have data definition, see example in R26 </td></tr>
+<tr><td> R33 </td><td> Complex type has data definition
 
+Example:
+
+```
+    <xsd:complexType name="CriterionType">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="en">A condition for evaluation or assessment.</xsd:documentation>
+        </xsd:annotation>
+        <xsd:complexContent>
+            <xsd:extension base="RequirementType">
+                <xsd:sequence>
+                    <xsd:element ref="Bias" minOccurs="0" maxOccurs="unbounded">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">Additional parameter(s) used to adjust the evaluation of the Criterion composed of multiple sub-Criteria and their respective weights.</xsd:documentation>
+                        </xsd:annotation>
+                    </xsd:element>
+                    <xsd:element ref="Weight" minOccurs="0" maxOccurs="unbounded">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">Relative importance assigned to a given Criterion.</xsd:documentation>
+                        </xsd:annotation>
+                    </xsd:element>
+                    <xsd:element ref="WeightingConsiderationDescription" minOccurs="0" maxOccurs="unbounded">
+                        <xsd:annotation>
+                            <xsd:documentation xml:lang="en">The explanation of how the weighting of a Criterion is to be used at evaluation time.</xsd:documentation>
+                        </xsd:annotation>
+                    </xsd:element>
+                    <xsd:element ref="WeightingTypeProperty" minOccurs="0" maxOccurs="unbounded">
+                           <xsd:annotation>
+                            <xsd:documentation xml:lang="en">The numeric form used to weight.</xsd:documentation>
+                        </xsd:annotation>
+                    </xsd:element>
+                    <xsd:element ref="CriterionAugmentationPoint" minOccurs="0" maxOccurs="unbounded"/>
+                </xsd:sequence>
+            </xsd:extension>
+        </xsd:complexContent>
+    </xsd:complexType>
+```
+ </td></tr>
+<tr><td> R34 </td><td> For every class identified in the Core Vocabularies model, a named xs:complexType MUST be defined, see example in R33 </td></tr>
+<tr><td> R35 </td><td> A Core Vocabularies xs:complexType name MUST have the separators removed (spaces) from the related class and with the suffix `Type`, see example in R33 </td></tr>
+<tr><td> R36 </td><td> Only types have name ending in Type or SimpleType, except those that are named Type in the Core Vocabularies, see example in R33 </td></tr>
+<tr><td> R37 </td><td> The predefined XML Schema type `xs:anyType` MUST NOT be used </td></tr>
+<tr><td> R38 </td><td> `xs:notation` MUST NOT be used </td></tr>
+<tr><td> R39 </td><td> The `xs:all` element MUST NOT be used </td></tr>
+<tr><td> R40 </td><td> The `xs:anyAttribute` MUST NOT be used </td></tr>
+<tr><td> R41 </td><td> The `xs:any` MUST NOT be used </td></tr>
+<tr><td> R42 </td><td> The `xs:choice` MUST NOT be used </td></tr>
+<tr><td> R43 </td><td> No mixed content </td></tr>
+<tr><td> R44 </td><td> Complex Type extension or restriction MAY be used where appropriate.  </td></tr>
+<tr><td> R45 </td><td> Sequence has minimum cardinality 1 </td></tr>
+<tr><td> R46 </td><td> Sequence has maximum cardinality 1 </td></tr>
 </table> 
  
