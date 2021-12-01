@@ -192,3 +192,7 @@ Example:
 <tr><td> R46 </td><td> Sequence has maximum cardinality 1 </td></tr>
 </table> 
  
+## Example serialisation
+The following files apply for CCCEV the above XML serialization rules. 
+  - 
+  - 
