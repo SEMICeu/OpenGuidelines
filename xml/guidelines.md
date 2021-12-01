@@ -37,3 +37,6 @@ In the below table there are main principles of the Core Vocabularies XML schema
 | PR11 | Be Consistent | Component definitions in Core Vocabularies schemas SHOULD have semantic consistency. | NIEM |
 | PR12 | Reserve inheritance for specialization | Complex type definitions in Core Vocabularies schemas SHOULD use type inheritance only for specialization. | NIEM |
 | PR13 | Be mindful of namespace cohesion | XML namespaces defined by Core Vocabularies schemas SHOULD encapsulate data components that are coherent, consistent, and internally related as a set. A namespace SHOULD encapsulate components that tend to change together. | NIEM |
+
+
+
