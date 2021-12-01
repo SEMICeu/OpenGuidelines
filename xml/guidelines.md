@@ -1,3 +1,6 @@
+**Disclaimer**
+The status of this guideline is a working draft. 
+
 # Introduction
 
 The Core Vocabularies are semantic agreements. The semantics are expressed in human readable format, but also in machine readable formats. The Core Vocabularies use Semantic Web technology for the latter.  Besides historical reasons, it can be considered as a lightweight formalization of the semantics, as it is able to connect concrete representation with the human readable interpretation due the fact that the identifiers are dereferenceable. 
