@@ -60,7 +60,7 @@ alphabetized order
 alphabetized order
 ``` 
 </td></tr>
-<tr><td> R2 </td><td> XML schema element declaration MUST be:
+<tr><td> R2 </td><td> The XML document MUST start with:
 
 ```
 <?xml version="1.0" encoding="UTF-8"?>
@@ -100,7 +100,7 @@ Example:
 <tr><td> R10 </td><td> The xs:schema MAY have attributeFormDefault=unqualified (default value), see example in R4 </td></tr>
 <tr><td> R11 </td><td> Core Vocabularies schema MAY be split into multiple schema modules </td></tr>
 <tr><td> R12 </td><td> xs:import must have a namespace </td></tr>
-<tr><td> R13 </td><td> Each xsd:schemaLocation attribute declaration MUST contain a system-resolvable URL </td></tr>
+<tr><td> R13 </td><td> Each xsd:schemaLocation attribute declaration MUST contain a resolvable URL. The URL is thus an absolute public URL.</td></tr>
 <tr><td> R14 </td><td> Comment is not recommended </td></tr>
 <tr><td> R15 </td><td> Documentation element has no element children </td></tr>
 <tr><td> R16 </td><td> xs:documentation has xml:lang, see example in R4 </td></tr>
@@ -112,7 +112,7 @@ Example:
 ```
 See example in R4
 </td></tr>
-<tr><td> R19 </td><td> xs:appinfo children are comments, elements, or whitespace, see example in R4 </td></tr>
+<tr><td> R19 </td><td> The Appinfo (xs:appinfo) defines no XML children. Nevertheless, the content will expected in a structured format, see example in R4 </td></tr>
 <tr><td> R20 </td><td> Appinfo child elements have namespaces, see example in R4 </td></tr>
 <tr><td> R21 </td><td> Appinfo descendants are not XML Schema elements </td></tr>
 <tr><td> R22 </td><td> Core Vocabularies XML element and type names MUST be in the English language, using the primary English spellings provided in the Oxford English Dictionary, except for those concept that imported from other vocabularies </td></tr>
@@ -135,7 +135,7 @@ Example:
 <tr><td> R29 </td><td> Element or attribute name follows pattern </td></tr>
 <tr><td> R30 </td><td> All elements declarations MUST be global, see example in R26 </td></tr>
 <tr><td> R31 </td><td> All types MUST be named (Complex type definition is top-level) </td></tr>
-<tr><td> R32 </td><td> All elements declaration have data definition, see example in R26 </td></tr>
+<tr><td> R32 </td><td> All elements declarations have a definition, see example in R26 </td></tr>
 <tr><td> R33 </td><td> Complex type has data definition
 
 Example:
