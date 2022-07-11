@@ -29,11 +29,11 @@ In the below table there are main principles of the Core Vocabularies XML schema
 | PR2 | Legibility | The Core Vocabularies schemas will be documented, preferably by linking with the Core Vocabularies' specification in HTML  | UBL, NIEM |
 | PR3 | Simplicity | Core Vocabularies will be kept simple to accommodate customization, the specification SHOULD specify what is necessary for semantic interoperability and no more. | UBL, NIEM |
 | PR4 | Component Reuse | Core Vocabularies will be structured in order to maximize their reuse. Core Vocabularies schemas SHOULD NOT use or define local or anonymous components, as they adversely affect reuse. | UBL,NIEM |
-| PR5 | Easy Customization and Maintenance | Core Vocabularies schemas SHOULD be designed to enable extensions. The design SHOULD take into consideration all means to easy maintenance, in particular any aspect related to automated generation of the schemas. | UBL, NIEM |
+| PR5 | Easy Customization and Maintenance | Core Vocabularies schemas SHOULD be designed to enable extensions. The schema design SHOULD take into consideration all means to ease maintenance, in particular any aspect related to automated generation of the schemas. | UBL, NIEM |
 | PR6 | Relationship to Other Namespaces  | Core Vocabularies schemas design will be cautious about making dependencies on other namespaces. | UBL |
 | PR7 | Adoption of open standards | Core Vocabularies schemas SHOULD leverage and enable use of other open standards. | NIEM |
 | PR8 | W3C XML Schema language | All Core Vocabularies design rules are based on the W3C XML Schema, so that instances can be validated against | UBL, NIEM |
-| PR9 | Using separated rules | Using separate rules allows specific conditions to be clearly stated. Putting multiple clauses in a rule makes the rule harder to enforce. | NIEM |
+| PR9 | Using separated rules | Using separate rules allows specific conditions to be clearly stated. i.e. putting multiple clauses in a rule makes the rule harder to enforce. | NIEM |
 | PR10 | Naming consistency | Components in Core Vocabularies SHOULD be given names that are consistent with names of other Core Vocabularies components. Such names SHOULD be based on simple, enforceable rules. For instance, they should contain only valid characters. | NIEM |
 | PR11 | Be Consistent | Component definitions in Core Vocabularies schemas SHOULD be semantic consistent. For instance, there should be no conflicts of meaning among components.  | NIEM |
 | PR12 | Reserve inheritance for specialization | Complex type definitions in Core Vocabularies schemas SHOULD use type inheritance only for specialization. | NIEM |
@@ -69,7 +69,7 @@ alphabetized order
 </td></tr>
 <tr><td> R3 </td><td> The XML document MUST BE a xs:schema
 </td></tr>
-<tr><td> R4 </td><td> The xs:schema must have a data definition, in order to describe Core Vocabularies.
+<tr><td> R4 </td><td> The xs:schema MUST have a data definition, in order to describe Core Vocabularies.
 
 Example:
 ```
@@ -92,14 +92,14 @@ Example:
     </xsd:annotation>
 ```
 </td></tr>
-<tr><td> R5 </td><td> The xs:schema must have a Target Namespace, see example in R4 </td></tr>
+<tr><td> R5 </td><td> The xs:schema MUST have a Target Namespace, see example in R4 </td></tr>
 <tr><td> R6 </td><td> The Target Namespace MUST be an absolute URI, see example in R4 </td></tr>
-<tr><td> R7 </td><td> The Target Namespace MUST never be changed </td></tr>
+<tr><td> R7 </td><td> The Target Namespace MUST never be changed, as a change reflects a major semantical impact.</td></tr>
 <tr><td> R8 </td><td> The xs:schema MUST have a version, see example in R4 </td></tr>
 <tr><td> R9 </td><td> The xs:schema MUST have elementFormDefault=qualified, see example in R4 </td></tr>
 <tr><td> R10 </td><td> The xs:schema MAY have attributeFormDefault=unqualified (default value), see example in R4 </td></tr>
 <tr><td> R11 </td><td> Core Vocabularies schema MAY be split into multiple schema modules </td></tr>
-<tr><td> R12 </td><td> xs:import must have a namespace </td></tr>
+<tr><td> R12 </td><td> xs:import MUST have a namespace </td></tr>
 <tr><td> R13 </td><td> Each xsd:schemaLocation attribute declaration MUST contain a resolvable URL. The URL is thus an absolute public URL.</td></tr>
 <tr><td> R14 </td><td> Comment is not recommended </td></tr>
 <tr><td> R15 </td><td> Documentation element has no element children </td></tr>
